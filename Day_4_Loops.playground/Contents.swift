@@ -56,7 +56,7 @@ repeat {
     print("This is false.")
 } while false
 
-//MARK: EXITING LOOPS
+//MARK: EXITING LOOPS - BREAK
 
 var countDown = 10
 
@@ -99,3 +99,34 @@ outerLoop: for i in 1...10 {
         }
     }
 }
+
+//MARK: - Skipping items - CONTINUE
+/* As you’ve seen, the break keyword exits a loop. But if you just want to skip the current item and continue on to the next one, you should use continue instead.
+ */
+
+for i in 1...10 {
+    if i % 2 == 1 {
+        continue
+    }
+
+    print(i)
+}
+
+//MARK: - INFINITE LOOPS
+/* It’s common to use while loops to make infinite loops: loops that either have no end or only end when you’re ready. All apps on your iPhone use infinite loops, because they start running, then continually watch for events until you choose to quit them.
+ 
+ To make an infinite loop, just use true as your condition. true is always true, so the loop will repeat forever. Warning: Please make sure you have a check that exits your loop, otherwise it will never end.
+ */
+
+var counter = 0
+
+while true {
+    print(" ")
+    counter += 1
+
+    if counter == 273 {
+        print("break")
+        break
+    }
+}
+
