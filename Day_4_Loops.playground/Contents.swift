@@ -140,3 +140,24 @@ repeat {
 } while random == numbers
 
 print(random)
+
+//MARK: - Why does Swift have labeled statements?
+/* With that small change, those three loops stop running as soon as the combination is found. In this trivial case it’s unlikely to make a performance difference, but what if your items had hundreds or even thousands of items?
+ */
+
+let options = ["up", "down", "left", "right"]
+let secretCombination = ["up", "up", "right"]
+
+outerLoop: for option1 in options {
+    for option2 in options {
+        for option3 in options {
+            print("In loop")
+            let attempt = [option1, option2, option3]
+
+            if attempt == secretCombination {
+                print("The combination is \(attempt)!")
+                break outerLoop
+            }
+        }
+    }
+}
