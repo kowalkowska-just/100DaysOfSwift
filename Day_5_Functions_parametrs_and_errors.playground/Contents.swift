@@ -39,4 +39,13 @@ square(number: 5)
 let result = squareReturn(number: 8)
 print(result)
 
+//MARK: - Parameter labels
+
+func sayHello(to name: String) {
+    print("Hello, \(name)!")
+}
+
+sayHello(to: "Taylor")
+
+
 
