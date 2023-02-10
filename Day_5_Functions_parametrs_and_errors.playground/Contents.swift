@@ -17,3 +17,12 @@ MyApp will resize them all into thumbnails
 }
 printHelp()
 
+// MARK: - Parameters
+/* For example, we can write a function to print the square of any number:
+ */
+
+func square(number: Int) {
+    print(number * number)
+}
+
+square(number: 5)
