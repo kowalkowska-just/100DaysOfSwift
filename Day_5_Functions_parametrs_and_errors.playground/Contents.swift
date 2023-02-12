@@ -55,4 +55,27 @@ func greet(_ person: String) {
 
 greet("Taylor")
 
+//MARK: - Default paramteres
+
+func greet(_ person: String, nicely: Bool = true) {
+    if nicely == true {
+        print ("Hello, \(person)")
+    } else {
+        print("Oh no, it's \(person) again...")
+    }
+}
+
+greet("Taylor")
+greet("Taylor", nicely: false)
+
+//MARK: - Variadic functions
+
+print("Haters", "gonna", "hate")
+func square(numbers: Int...) {
+    for number in numbers {
+        print ("\(number) square is \(number * number)")
+    }
+}
+
+square(numbers: 1, 2, 3, 4, 5, 6)
 
