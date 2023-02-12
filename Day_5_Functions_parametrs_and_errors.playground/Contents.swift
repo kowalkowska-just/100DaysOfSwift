@@ -93,3 +93,11 @@ func checkPossward(_ password: String) throws -> Bool {
     return true
 }
 
+//MARK: - Running throwing functions
+
+do {
+    try checkPossward("password")
+    print("That password is good!")
+} catch {
+    print("You can't use that password.")
+}
