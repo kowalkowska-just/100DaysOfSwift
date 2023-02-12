@@ -79,3 +79,17 @@ func square(numbers: Int...) {
 
 square(numbers: 1, 2, 3, 4, 5, 6)
 
+//MARK: - Writing throwing functions
+
+enum PasswardError: Error {
+    case obvious
+}
+
+func checkPossward(_ password: String) throws -> Bool {
+    if password == "password" {
+        throw PasswardError.obvious
+    }
+    
+    return true
+}
+
