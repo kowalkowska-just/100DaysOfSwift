@@ -47,5 +47,12 @@ func sayHello(to name: String) {
 
 sayHello(to: "Taylor")
 
+//MARK: - Omitting parameter labels
+
+func greet(_ person: String) {
+    print("Hello, \(person)!")
+}
+
+greet("Taylor")
 
 
