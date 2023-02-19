@@ -56,3 +56,17 @@ func travel(action: (String, Int) -> String) {
 travel {
     "I'm going to \($0) at \($1) miles per hour."
 }
+
+//MARK: - Returning closures from functions.
+
+func travel() -> (String) -> Void {
+    return {
+        print("I'm going to \($0)")
+    }
+}
+
+let result = travel()
+result("London")
+
+// \/ It is really not recommended - to call the return value from travel() directly.
+let result2 = travel()("London")
