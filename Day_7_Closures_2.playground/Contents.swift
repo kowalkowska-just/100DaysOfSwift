@@ -70,3 +70,18 @@ result("London")
 
 // \/ It is really not recommended - to call the return value from travel() directly.
 let result2 = travel()("London")
+
+
+//MARK: - Capturing values.
+
+func travel1() -> (String) -> Void {
+    var counter = 1
+
+    return {
+        print("\(counter). I'm going to \($0)")
+        counter += 1
+    }
+}
+
+let result1 = travel1()
+result("London1")
