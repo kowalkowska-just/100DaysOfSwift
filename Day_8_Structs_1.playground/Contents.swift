@@ -32,3 +32,20 @@ func authenticate(_ user: (name: String, age: Int, city: String)) { }
 func showProfile(for user: (name: String, age: Int, city: String)) { }
 func signOut(_ user: (name: String, age: Int, city: String)) { }
 
+//MARK: - Computed properties
+
+struct Sport {
+    var name: String
+    var isOlympicSport: Bool
+
+    var olympicStatus: String {
+        if isOlympicSport {
+            return "\(name) is an Olympic sport"
+        } else {
+            return "\(name) is not an Olympic sport"
+        }
+    }
+}
+
+let chessBoxing = Sport(name: "Chessboxing", isOlympicSport: false)
+print(chessBoxing.olympicStatus)
