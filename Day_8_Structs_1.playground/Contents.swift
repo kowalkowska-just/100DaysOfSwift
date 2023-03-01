@@ -6,7 +6,7 @@ import UIKit
 //    var name: String
 //}
 
-var tennis = Sport(name: "Tennis")
+var tennis = Sport(name: "Tennis", isOlympicSport: true)
 print(tennis.name)
 
 tennis.name = "Lawn tennis"
@@ -58,6 +58,20 @@ struct Progress {
         didSet {
             print("\(task) is now \(amount)% complete")
         } // didSet wykonuje się za każdym razem gdy wartość amount się zmieni.
-          // willSet wykonuje się za każdym razem przed zmianą właściwości. 
+          // willSet wykonuje się za każdym razem przed zmianą właściwości.
     }
 }
+
+//MARK: - Methods
+
+struct City {
+    var population: Int
+
+    func collectTaxes() -> Int {
+        return population * 1000
+    }
+}
+
+let london = City(population: 9_000_000)
+print(london.collectTaxes())
+print(london)
