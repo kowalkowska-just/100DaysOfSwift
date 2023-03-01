@@ -49,3 +49,15 @@ struct Sport {
 
 let chessBoxing = Sport(name: "Chessboxing", isOlympicSport: false)
 print(chessBoxing.olympicStatus)
+
+//MARK: - Property observers.
+
+struct Progress {
+    var task: String
+    var amount: Int {
+        didSet {
+            print("\(task) is now \(amount)% complete")
+        } // didSet wykonuje się za każdym razem gdy wartość amount się zmieni.
+          // willSet wykonuje się za każdym razem przed zmianą właściwości. 
+    }
+}
