@@ -101,4 +101,15 @@ print(string.hasPrefix("Do"))
 print(string.uppercased())
 print(string.sorted())
 
+//MARK: - Properties and methods of arrays
 
+var toys = ["Woody"]
+print(toys.count)
+
+toys.append("Buzz")
+toys.firstIndex(of: "Buzz")
+
+print((toys.sorted()))
+toys.remove(at: 0)
+
+print(toys)
