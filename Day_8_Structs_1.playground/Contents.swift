@@ -93,3 +93,12 @@ print(person.name)
 person.makeAnonymous()
 print(person.name)
 
+//MARK: - Properties and methods of strings
+
+let string = "Do or do not, there is no try"
+print(string.count)
+print(string.hasPrefix("Do"))
+print(string.uppercased())
+print(string.sorted())
+
+
