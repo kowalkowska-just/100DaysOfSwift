@@ -58,3 +58,20 @@ let roslin3 = Employee2(name: "Laura Roslin")
 
 // as does creating an anonymous employee
 let anon = Employee2()
+
+//MARK: - Referring to the current instance.
+
+/* For example, if you create a Person struct with a name property, then tried to write an initializer that accepted a name parameter, self helps you distinguish between the property and the parameter – self.name refers to the property, whereas name refers to the parameter. */
+
+struct Person {
+    var name: String
+
+    init(name: String) {
+        print("\(name) was born!")
+        self.name = name
+    }
+}
+
+var person = Person(name: "Juliusz")
+print(person)
+
