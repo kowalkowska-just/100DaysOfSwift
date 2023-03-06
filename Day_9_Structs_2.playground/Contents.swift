@@ -24,3 +24,37 @@ print(user1)
 user1.username = "twostraws"
 print(user1)
 
+//MARK: How do Swift’s memberwise initializers work?
+
+struct Employee {
+    var name: String
+    var yearsActive = 0
+}
+
+struct Employee1 {
+    var name: String
+    var yearsActive = 0
+
+    init() {
+        self.name = "Anonymous"
+        print("Creating an anonymous employee…")
+    }
+}
+
+struct Employee2 {
+    var name: String
+    var yearsActive = 0
+}
+
+extension Employee2 {
+    init() {
+        self.name = "Anonymous"
+        print("Creating an anonymous employee…")
+    }
+}
+
+// creating a named employee now works
+let roslin3 = Employee2(name: "Laura Roslin")
+
+// as does creating an anonymous employee
+let anon = Employee2()
