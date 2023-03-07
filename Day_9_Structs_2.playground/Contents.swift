@@ -114,3 +114,18 @@ let lola = Studnet(name: "Lola")
 let taylor = Studnet(name: "Taylor")
 
 print(Studnet.classSize)
+
+//MARK: - Access control.
+
+struct Person2 {
+    private var id: String
+
+    init(id: String) {
+        self.id = id
+    }
+    
+    func identify() -> String {
+        return "My social security number is \(id)"
+    }
+}
+
