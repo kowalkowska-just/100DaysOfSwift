@@ -75,3 +75,42 @@ struct Person {
 var person = Person(name: "Juliusz")
 print(person)
 
+//MARK: - Lazy properties.
+
+struct FamilyTree {
+    init() {
+        print("Creating family tree!")
+    }
+}
+
+struct Person1 {
+    var name: String
+    var familyTree = FamilyTree()
+
+    init(name: String) {
+        self.name = name
+    }
+}
+
+var ed = Person1(name: "Ed")
+
+//lazy var familyTree = FamilyTree()
+
+ed.familyTree
+
+//MARK: - Static properties and methods.
+
+struct Studnet {
+    static var classSize = 0
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+        Studnet.classSize += 1
+    }
+}
+
+let lola = Studnet(name: "Lola")
+let taylor = Studnet(name: "Taylor")
+
+print(Studnet.classSize)
