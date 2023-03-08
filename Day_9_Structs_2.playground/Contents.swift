@@ -128,4 +128,3 @@ struct Person2 {
         return "My social security number is \(id)"
     }
 }
-
